@@ -5,4 +5,4 @@
 On the present chart, counts approximately the number of "**yeah**" (and not "oh yeah") to make it easier.
 
 
-🎸 **OH YEAH** 🎸
+**OH YEAH** 🎸
