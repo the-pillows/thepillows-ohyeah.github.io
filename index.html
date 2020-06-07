@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>the pillows oh yeah counter</title>
+    <title>the pillows 'yeah' counter Chart</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="the pillows 'yeah' Chart"/>
+    <meta name="description" content="Chart that counts the number of 'yeah' said by the japanese band the pillows."/>
     <meta name="keywords" content="the pillows, japanese band, rock, chart, yeah, oh yeah"/>
     <meta property="og:url" content="https://thepillows-ohyeah.github.io/"/>
-    <meta property="og:title" content="the pillows 'yeah' Chart"/>
-    <meta property="og:description" content="the pillows Chart"/>
-    <meta property="og:image" content="https://thepillows-ohyeah.github.io/icon.png"/>
+    <meta property="og:title" content="the pillows 'yeah' counter Chart"/>
+    <meta property="og:description" content="Chart that counts the number of 'yeah' said by the japanese band the pillows."/>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -185,6 +184,22 @@
       </div>
     </div>
 
+    <div id="disqus_thread" class="container-fluid mb-5"></div>
+    <script>
+      var disqus_config = function () {
+      this.page.url = "https://thepillows-ohyeah.github.io/";
+      this.page.identifier = "thepillows-ohyeah";
+      };
+
+      (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://thepillows-ohyeah.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                      
+
     <footer class="bg-dark pt-4 pb-2">
       <div class="container-fluid">
         <div class="row">
@@ -192,7 +207,7 @@
             <p class="text-white">Source: My boredom due to COVID-19 crisis.</p>
           </div>
           <div class="col-6">
-            <p class="text-right text-white">With <span class="heart-emoji-size">💖</span> from Spain</p>
+            <p class="text-right text-white">With love from Spain</p>
           </div>
         </div>
       </div>
@@ -203,6 +218,8 @@
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script id="dsq-count-scr" src="//thepillows-ohyeah.disqus.com/count.js" async></script>
     <script src="js/main.js"></script>
   </body>
+  <!-- Made by https://github.com/alan-garcia -->
 </html>
