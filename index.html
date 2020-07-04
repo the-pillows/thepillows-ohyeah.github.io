@@ -3,241 +3,40 @@
   <head>
     <title>the pillows 'yeah' counter Chart</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Chart that counts the number of 'yeah' said by the japanese band the pillows."/>
     <meta name="keywords" content="the pillows, japanese band, rock, chart, yeah, oh yeah"/>
     <meta property="og:url" content="https://thepillows-ohyeah.github.io/"/>
     <meta property="og:title" content="the pillows 'yeah' counter Chart"/>
     <meta property="og:description" content="Chart that counts the number of 'yeah' said by the japanese band the pillows."/>
     <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/4/40/The_Pillows_Band.jpg"/>
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div class="d-flex card text-center pt-3">
-      <h1 class="mb-3">the pillows "yeah" counter Chart</h1>
-      <div class="d-flex align-items-center the-pillows-background font-weight-bold">
-        <div class="mx-auto the-pillows-background-text">
-          <p class="mb-5 font-weight-bold display-2">OH YEAH?</p>
-          <p class="font-weight-bold display-4">Do you know me!?</p>
-          <p class="font-weight-bold display-4">Our name is <strong><a href="https://en.wikipedia.org/wiki/The_Pillows" target="_blank">the pillows</a></strong>, OK?</p>
-        </div>
-      </div>
-    </div>
+    <div id="app"></div>
 
-    <div class="container-fluid card mb-3 pt-5">
-      <div class="row card-body">
-        <h1 class="mx-auto mb-5 font-weight-bold">Yeah Ranking</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-12 mx-auto mb-5">
-          <h2 class="font-weight-bold text-center mb-3">Total current "yeahs"</h2>
-          <div class="text-center mb-3">
-            <div class="text-center winning-emoji-size">🏆</div>
-            <span class="yeah-podium-numbers font-weight-bold text-center text-success">647</span>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-12 mx-auto mb-5">
-          <h3 class="text-center mb-3">First song with more "yeah"</h3>
-          <div class="yeah-podium-container d-flex mx-auto mb-3">
-            <div class="text-center winning-emoji-size">🥇</div>
-          </div>
-          <p class="yeah-podium-numbers yeah-first-position font-weight-bold text-center align-self-center">76</p>
-          <p class="font-weight-bold text-center song-winner-size">Like a Lovesong (Back to Back)</p>
-          <p class="text-center">Album: Little Busters (1998)</p>
-        </div>
-        <div class="col-lg-4 col-md-12 mx-auto mb-5">
-          <h3 class="text-center mb-3">Second song with more "yeah"</h3>
-          <div class="yeah-podium-container d-flex mx-auto mb-3">
-            <div class="text-center winning-emoji-size">🥈</div>
-          </div>
-          <p class="yeah-podium-numbers yeah-second-position font-weight-bold text-center align-self-center">42</p>
-          <p class="font-weight-bold text-center song-winner-size">Rookie Jet</p>
-          <p class="text-center">Album: Thank you, My Twilight (2002)</p>
-        </div>
-        <div class="col-lg-4 col-md-12 mx-auto mb-5">
-          <h3 class="text-center mb-3">Third song with more "yeah"</h3>
-          <div class="yeah-podium-container d-flex mx-auto mb-3">
-            <div class="text-center winning-emoji-size">🥉</div>
-          </div>
-          <p class="yeah-podium-numbers yeah-third-position font-weight-bold text-center align-self-center">35</p>
-          <p class="font-weight-bold text-center song-winner-size">Back Seat Dog</p>
-          <p class="text-center">Album: Happy Bivouac (1999)</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mx-auto mb-5">
-          <h3 class="text-center mb-3">First "yeah" song</h3>
-          <div class="text-center mb-3">
-            <div class="text-center winning-emoji-size">🏆</div>
-            <span class="font-weight-bold text-center text-success song-winner-size">Never Find</span>
-          </div>
-          <p class="text-center">Album: 90's My Life (1990)</p>
-        </div>
-        <div class="col-md-6 mx-auto mb-5">
-          <h3 class="text-center mb-3">Last "yeah" song</h3>
-          <div class="text-center mb-3">
-            <div class="text-center winning-emoji-size">🏆</div>
-            <span class="font-weight-bold text-center text-danger song-winner-size">Before going bed</span>
-          </div>
-          <p class="text-center">Album: Rebroadcast (2018)</p>
-        </div>
-      </div>
-      <div class="container mb-5 pt-5">
-        <div class="row">
-          <h1 class="mx-auto mb-5 font-weight-bold">Yeah Overall</h1>
-        </div>
-        <div class="row">
-          <div class="col-12 mb-3">
-            <p class="mb-2">Total years with some "yeahs"! <span class="yeah-overall-emoji-size">😀</span></p>
-            <div class="progress progressbar-height">
-              <div class="progress-bar bg-success progressbar-width-some-yeah" role="progressbar" aria-valuenow="24" aria-valuemin="0" aria-valuemax="30">24 years</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 mb-3">
-            <p class="mb-2">Total years with "yeahs" in a row! <span class="yeah-overall-emoji-size">😄</span></p>
-            <div class="progress progressbar-height">
-              <div class="progress-bar bg-success progressbar-width-yeah-in-a-row" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="30">16 years</div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 mb-3">
-            <p class="mb-2">Total years with no "yeahs" <span class="yeah-overall-emoji-size">☹️</span></p>
-            <div class="progress progressbar-height">
-              <div class="progress-bar bg-danger progressbar-width-no-yeah" role="progressbar" aria-valuenow="7" aria-valuemin="0" aria-valuemax="30">7 years</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid mb-5 pt-5">
-      <div class="row">
-        <h3 class="mx-auto mb-3 font-weight-bold">Number of "yeahs" per year</h3>
-      </div>
-      <div class="row">
-        <div class="number-of-yeah-charts number-of-yeah-per-year mx-auto">
-          <canvas id="yeahsPerYearChart"></canvas>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid mb-5 pt-5">
-      <div class="row">
-        <h3 class="mx-auto mb-3 font-weight-bold">Number of "yeahs" per decade</h3>
-      </div>
-      <div class="row">
-        <div class="number-of-yeah-charts number-of-yeah-per-decade mx-auto">
-          <canvas id="yeahsPerDecadeChart"></canvas>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid mb-5 pt-5">
-      <div class="row">
-        <h3 class="mx-auto mb-3 font-weight-bold">Number of "yeahs" per label company</h3>
-      </div>
-      <div class="row">
-        <div class="number-of-yeah-charts number-of-yeah-per-company mx-auto">
-          <canvas id="yeahsPerLabelCompanyChart"></canvas>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid mb-5 pt-5">
-      <div class="row">
-        <h3 class="mx-auto mb-3 font-weight-bold">the pillows all "yeah" songs</h3>
-      </div>
-      <div class="row mx-auto">
-        <table id="thepillowsAllSongs-datatable" class="table table-responsive table-striped mx-auto">
-          <thead class="thead-thepillows">
-            <tr>
-              <th scope="col" class="text-center">#</th>
-              <th scope="col" class="text-center">Song Name</th>
-              <th scope="col" class="text-center">Album Name</th>
-              <th scope="col" class="text-center">Disc Type</th>
-              <th scope="col" class="text-center">Year release</th>
-              <th scope="col" class="text-center">Number of "yeahs"</th>
-            </tr>
-          </thead>
-        </table>
-      </div>
-    </div>
-
-    <div class="container-fluid mb-5 pt-5">
-      <div class="row">
-        <h3 class="mx-auto mb-5 font-weight-bold">"Oh Yeah" examples compilation</h3>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <p>Examples of "oh yeah" catch-phrase compilation for understand the context of these charts, although present charts <strong><ins>actually only counting "yeah", and not "oh yeah"</ins></strong>.</p>
-          <p>The video's original author below is <a href="https://www.youtube.com/user/sononamida/" target="_blank">sononamida</a>, so watch it directly from YouTube as appreciation.</p>
-        </div>
-      </div>
-      <div class="row mb-5 mt-5 justify-content-center">
-        <div class="col-6">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Y08_zl7Qhdg"></iframe>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/z3mqVlymwVA"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="disqus_thread" class="container-fluid mb-5"></div>
     <script>
       var disqus_config = function () {
-      this.page.url = "https://thepillows-ohyeah.github.io/";
-      this.page.identifier = "thepillows-ohyeah";
+        this.page.url = "https://thepillows-ohyeah.github.io/";
+        this.page.identifier = "thepillows-ohyeah";
       };
 
       (function() {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://thepillows-ohyeah.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
+        var d = document, s = d.createElement('script');
+        s.src = 'https://thepillows-ohyeah.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
       })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                      
-
-    <footer class="bg-dark pt-4 pb-2">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-6">
-            <p class="text-white">Source: My boredom due to COVID-19 crisis.</p>
-          </div>
-          <div class="col-6">
-            <p class="text-right text-white">With love from Spain</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168710081-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-168710081-1');
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
-    <script id="dsq-count-scr" src="//thepillows-ohyeah.disqus.com/count.js" async></script>
-    <script src="js/main.js"></script>
+    <script src="/dist/build.js"></script>
   </body>
-  <!-- Made by https://github.com/alan-garcia -->
 </html>
