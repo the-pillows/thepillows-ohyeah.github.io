@@ -6,3 +6,9 @@ On the present chart, counts approximately the number of "**yeah**" (and not "oh
 
 
 **OH YEAH** 🎸
+
+# Technologies used
+
+- Vue.js
+- BootstrapVue
+- Chart.js
