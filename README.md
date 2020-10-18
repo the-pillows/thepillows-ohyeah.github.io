@@ -12,3 +12,6 @@ On the present chart, counts approximately the number of "**yeah**" (and not "oh
 - Vue.js
 - BootstrapVue
 - Chart.js
+
+# Author
+[alan-garcia](https://github.com/alan-garcia)
