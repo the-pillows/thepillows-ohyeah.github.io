@@ -1,9 +1,16 @@
-a {
-  color: #D4AF37;
+a,
+a:hover {
+  color: #ffbc09;
 }
 
-a:hover {
-  color: #D4AF37;
+::selection {
+  color: #404040;
+  background-color: #ffbc09;
+}
+
+#yeah-title {
+  color: #ffbc09;
+  font-weight: 700;
 }
 
 .the-pillows-background {
@@ -41,15 +48,15 @@ a:hover {
 }
 
 .yeah-first-position {
-  color: #D4AF37;
+  color: #d4af37;
 }
 
 .yeah-second-position {
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 
 .yeah-third-position {
-  color: #CB6D51;
+  color: #cb6d51;
 }
 
 .number-of-yeah-charts {

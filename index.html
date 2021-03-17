@@ -10,14 +10,14 @@
     <meta property="og:title" content="the pillows 'yeah' counter Chart"/>
     <meta property="og:description" content="Chart that counts the number of 'yeah' said by the japanese band the pillows."/>
     <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/4/40/The_Pillows_Band.jpg"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.15.0/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.css">
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div id="app">
-      <div class="d-flex flex-column flex-wrap text-center pt-3">
-        <h1 class="mb-3">the pillows "yeah" counter Chart</h1>
+      <div class="d-flex flex-column flex-wrap text-center mb-5 pt-3">
+        <h1 class="mb-3">the pillows <span id="yeah-title">yeah</span> counter Chart</h1>
         <div class="d-flex align-items-center the-pillows-background font-weight-bold">
           <div class="mx-auto the-pillows-background-text">
             <p class="mb-5 font-weight-bold display-3">OH YEAH?</p>
@@ -28,17 +28,40 @@
           </div>
         </div>
       </div>
+
+      <b-container fluid class="mb-5 pt-5">
+        <b-row>
+          <b-col cols="12">
+            <h1 class="text-center mb-5 font-weight-bold">"Oh Yeah" examples compilation</h1>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col cols="12">
+            <p>In order to the context of these charts, some examples of <strong>"oh yeah"</strong> catch-phrase compilation that vocalist Sawao Yamanaka says in many songs, although present charts <strong><ins>actually only counting "yeah", and not "oh yeah"</ins></strong>.</p>
+            <p>The video's original author below is <a href="https://www.youtube.com/user/sononamida/" target="_blank">sononamida</a>, so watch it directly from YouTube as appreciation.</p>
+          </b-col>
+        </b-row>
+  
+        <b-row class="justify-content-md-center row mb-5 mt-5">
+          <b-col cols="6">
+            <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/Y08_zl7Qhdg" allowfullscreen></b-embed>
+          </b-col>
+          <b-col cols="6">
+            <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/z3mqVlymwVA" allowfullscreen></b-embed>
+          </b-col>
+        </b-row>
+      </b-container>
   
       <b-container fluid="lg" class="mb-3 pt-5">
         <b-row>
           <b-col>
-            <h1 class="text-center mb-5 font-weight-bold">Yeah Ranking Songs</h1>
+            <h2 class="text-center mb-5 font-weight-bold">Yeah Ranking Songs</h2>
           </b-col>
         </b-row>
   
         <b-row>
           <b-col class="mx-auto mb-5">
-            <h2 class="font-weight-bold text-center mb-3">Total current "yeahs"</h2>
+            <h3 class="font-weight-bold text-center mb-3">Total current "yeahs"</h3>
             <div class="text-center mb-3">
               <div class="text-center winning-emoji-size">🏆</div>
               <span class="yeah-podium-numbers font-weight-bold text-center text-success">647</span>
@@ -170,8 +193,8 @@
           </div>
         </b-row>
       </b-container>
-  
-      <b-container fluid="xl">
+      
+      <b-container fluid="xl" class="mb-5 pt-5">
         <b-row>
           <b-col cols="12">
             <h3 class="text-center mb-5 font-weight-bold">the pillows all "yeah" songs</h3>
@@ -193,30 +216,6 @@
         </b-row>
       </b-container>
   
-      <b-container fluid class="mb-5 pt-5">
-        <b-row>
-          <b-col cols="12">
-            <h3 class="text-center mb-5 font-weight-bold">"Oh Yeah" examples compilation</h3>
-          </b-col>
-        </b-row>
-  
-        <b-row>
-          <b-col cols="12">
-            <p>Examples of "oh yeah" catch-phrase compilation for understand the context of these charts, although present charts <strong><ins>actually only counting "yeah", and not "oh yeah"</ins></strong>.</p>
-            <p>The video's original author below is <a href="https://www.youtube.com/user/sononamida/" target="_blank">sononamida</a>, so watch it directly from YouTube as appreciation.</p>
-          </b-col>
-        </b-row>
-  
-        <b-row class="justify-content-md-center row mb-5 mt-5">
-          <b-col cols="6">
-            <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/Y08_zl7Qhdg" allowfullscreen></b-embed>
-          </b-col>
-          <b-col cols="6">
-            <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/z3mqVlymwVA" allowfullscreen></b-embed>
-          </b-col>
-        </b-row>
-      </b-container>
-  
       <div id="disqus_thread" class="comments container-fluid mb-5"></div> 
   
       <footer class="bg-dark pt-4 pb-2">
@@ -226,7 +225,7 @@
               <p class="text-white">Source: My boredom due to COVID-19 crisis.</p>
             </b-col>
             <b-col cols="6">
-              <p class="text-right text-white">With love from Spain</p>
+              <p class="text-right text-white">With 💛 from Spain</p>
             </b-col>
           </b-row>
         </b-container>
@@ -237,11 +236,12 @@
       <b-pagination	@input="$emit('input', $event)" :value="value":total-rows="rows" :per-page="perPage" aria-controls="discos-table" class="mt-4 mb-5" align="center" pills></b-pagination>
     </script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.15.0/bootstrap-vue.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168710081-1"></script>
     <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
   </body>
   <!-- Made by https://github.com/alan-garcia -->
 </html>
