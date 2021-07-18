@@ -17,9 +17,9 @@
   <body>
     <div id="app">
       <div class="d-flex flex-column flex-wrap text-center mb-5 pt-3">
-        <h1 class="mb-3">the pillows <span id="yeah-title">yeah</span> counter Chart</h1>
+        <h1 id="title-page" class="mb-3">the pillows <span id="yeah-title">yeah</span> counter Chart</h1>
         <div class="d-flex align-items-center the-pillows-background font-weight-bold">
-          <div class="mx-auto the-pillows-background-text">
+          <div id="presentation" class="mx-auto the-pillows-background-text">
             <p class="mb-5 font-weight-bold display-3">OH YEAH?</p>
             <p class="font-weight-bold h1">Do you know me!?</p>
             <p class="font-weight-bold h1">Our name is <strong>
@@ -29,7 +29,7 @@
         </div>
       </div>
 
-      <b-container fluid class="mb-5 pt-5">
+      <b-container class="mb-5 pt-5" fluid>
         <b-row>
           <b-col cols="12">
             <h1 class="text-center mb-5 font-weight-bold">"Oh Yeah" examples compilation</h1>
@@ -52,7 +52,7 @@
         </b-row>
       </b-container>
   
-      <b-container fluid="lg" class="mb-3 pt-5">
+      <b-container class="mb-3 pt-5" fluid>
         <b-row>
           <b-col>
             <h2 class="text-center mb-5 font-weight-bold">Yeah Ranking Songs</h2>
@@ -60,16 +60,14 @@
         </b-row>
   
         <b-row>
-          <b-col class="mx-auto mb-5">
+          <b-col class="mx-auto mb-5 yeah-total">
             <h3 class="font-weight-bold text-center mb-3">Total current "yeahs"</h3>
             <div class="text-center mb-3">
               <div class="text-center winning-emoji-size">🏆</div>
               <span class="yeah-podium-numbers font-weight-bold text-center text-success">647</span>
             </div>
           </b-col>
-        </b-row>
-  
-        <b-row >
+
           <b-col class="mx-auto mb-5">
             <h3 class="text-center mb-3">1<sup>st</sup> song with more "yeah"</h3>
             <div class="yeah-podium-container d-flex mx-auto mb-3">
@@ -89,7 +87,7 @@
             <p class="font-weight-bold text-center song-winner-size">Rookie Jet</p>
             <p class="text-center">Album: Thank you, My Twilight (2002)</p>
           </b-col>
-  
+
           <b-col class="mx-auto mb-5">
             <h3 class="text-center mb-3">3<sup>rd</sup> song with more "yeah"</h3>
             <div class="yeah-podium-container d-flex mx-auto mb-3">
@@ -121,7 +119,7 @@
           </b-col>
         </b-row>
   
-        <b-container fluid="xl" class="mb-5 pt-5">
+        <b-container class="mb-5 pt-5" fluid>
           <b-row>
             <h1 class="mx-auto mb-5 font-weight-bold">Yeah Overall</h1>
           </b-row>
@@ -154,8 +152,8 @@
           </b-row>
         </b-container>
       </b-container>
-  
-      <b-container fluid class="mb-5 pt-5">
+      
+      <b-container id="yeahs-per-year-container" class="pb-5 pt-5" fluid>
         <b-row>
           <b-col cols="12">
             <h3 class="text-center mb-3 font-weight-bold">Number of "yeahs" per year</h3>
@@ -168,7 +166,7 @@
         </b-row>
       </b-container>
   
-      <b-container fluid class="mb-5 pt-5">
+      <b-container id="yeahs-per-decade-container" class="pb-5 pt-5" fluid>
         <b-row>
           <b-col cols="12">
             <h3 class="text-center mb-3 font-weight-bold">Number of "yeahs" per decade</h3>
@@ -181,7 +179,7 @@
         </b-row>
       </b-container>
   
-      <b-container fluid class="mb-5 pt-5">
+      <b-container id="yeahs-per-label-company-container" class="pb-5 pt-5" fluid>
         <b-row>
           <b-col cols="12">
             <h3 class="text-center mb-3 font-weight-bold">Number of "yeahs" per label company</h3>
@@ -194,7 +192,7 @@
         </b-row>
       </b-container>
       
-      <b-container fluid="xl" class="mb-5 pt-5">
+      <b-container class="mb-5 pt-5" fluid>
         <b-row>
           <b-col cols="12">
             <h3 class="text-center mb-5 font-weight-bold">the pillows all "yeah" songs</h3>
@@ -207,11 +205,11 @@
               <b-form-input type="search" v-model="keyword" placeholder="Search a song, album or disc type"></b-form-input>
             </div>
 
-            <pagination class="mt-5 mb-4"	v-model="currentPage" :rows="rows" :per-page="perPage"></pagination>
+            <pagination class="mt-5 mb-5"	v-model="currentPage" :rows="rows" :per-page="perPage"></pagination>
 
             <b-table id="thepillowsAllSongs-table" show-empty :items="items" :fields="tableColumns" :sort-by.sync="sortBy" :sort-desc.sync="sortDesc" responsive :per-page="perPage" :current-page="currentPage" :striped="true" :bordered="true" :filter="keyword" :keyword="keyword" @filtered="onFiltered"></b-table>
-  
-            <pagination class="mt-4 mb-5"	v-model="currentPage" :rows="rows" :per-page="perPage"></pagination>
+
+            <pagination class="mt-5 mb-5"	v-model="currentPage" :rows="rows" :per-page="perPage"></pagination>
           </b-col>
         </b-row>
       </b-container>
@@ -233,12 +231,12 @@
     </div>
 
     <script type="text/x-template" id="pagination-template">
-      <b-pagination	@input="$emit('input', $event)" :value="value":total-rows="rows" :per-page="perPage" aria-controls="discos-table" class="mt-4 mb-5" align="center" pills></b-pagination>
+      <b-pagination	@input="$emit('input', $event)" :value="value" :total-rows="rows" :per-page="perPage" aria-controls="discos-table" class="mt-4 mb-5" align="center" pills></b-pagination>
     </script>
     
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168710081-1"></script>
     <script src="js/main.js"></script>
     <script src="js/charts.js"></script>

@@ -1,3 +1,11 @@
+:root {
+  --resolution-1080-title-font-size: 2.8em;
+  --resolution-2k-title-font-size: 3.2em;
+  --resolution-4k-title-font-size: 3.6em;
+
+  --resolution-4k-secondary-title-font-size: 3.3rem;
+}
+
 a,
 a:hover {
   color: #ffbc09;
@@ -38,9 +46,14 @@ a:hover {
   font-size: 1.3rem;
 }
 
+.yeah-total {
+  background: #94ffad;
+  border: 1px solid #63e081;
+}
+
 .yeah-podium-container {
-  width: 100px;
-  height: 100px;
+  width: 6.25em;
+  height: 6.25em;
 }
 
 .yeah-podium-numbers {
@@ -63,11 +76,17 @@ a:hover {
   position: relative;
 }
 
+#yeahs-per-year-container,
+#yeahs-per-decade-container,
+#yeahs-per-label-company-container {
+  background: #f8f8f8;
+}
+
 .number-of-yeah-per-year,
 .number-of-yeah-per-decade,
 .number-of-yeah-per-company {
-  width: 1000px;
-  height: 600px;
+  width: 62.5em;
+  height: 37.5em;
 }
 
 .page-item.active .page-link {
@@ -98,7 +117,44 @@ a:hover {
   background-color: #ffbc09;
 }
 
-@media (max-width: 991px) {
+@media (min-width: 160.01em) {
+  .h1, h1 {
+    font-size: var(--resolution-4k-title-font-size);
+  }
+
+  .h2, h2 {
+    font-size: var(--resolution-4k-secondary-title-font-size);
+  }
+
+  #presentation > p {
+    font-size: 6.5rem;
+  }
+
+  .number-of-yeah-per-year,
+  .number-of-yeah-per-decade,
+  .number-of-yeah-per-company {
+    height: 50em;
+    width: 118.75em;
+  }
+}
+
+@media (max-width: 160em) {
+  .h1, h1 {
+    font-size: var(--resolution-2k-title-font-size);
+  }
+
+  #presentation > p {
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 120em) {
+  .h1, h1 {
+    font-size: var(--resolution-1080-title-font-size);
+  }
+}
+
+@media (max-width: 62em) {
   .col {
     flex-basis: auto;
   }
