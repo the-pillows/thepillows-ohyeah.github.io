@@ -142,10 +142,6 @@ a:hover {
   .h1, h1 {
     font-size: var(--resolution-2k-title-font-size);
   }
-
-  #presentation > p {
-    font-size: 5.5rem;
-  }
 }
 
 @media (max-width: 120em) {
