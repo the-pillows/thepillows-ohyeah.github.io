@@ -25,7 +25,7 @@ new Vue({
     yeahMax: 30,
     someYeahCurrentValue: 24,
     yeahInRow: 16,
-    noYeahs: 7
+    noYeahs: 8
   },
   computed: {
     items() {
