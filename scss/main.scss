@@ -1,0 +1,283 @@
+@import "_variables.scss";
+
+h1, h2, h3, p, span, th, td {
+  color: $secondaryColor;
+}
+
+a,
+a:hover {
+  color: $primaryColor;
+}
+  
+::selection {
+  color: $secondaryColor;
+  background-color: $primaryColor;
+}
+  
+#yeah-title {
+  color: $primaryColor;
+  font-weight: 700;
+}
+  
+.the-pillows-background {
+  height: 100vh;
+  background-attachment: fixed;
+  background-image: url("../img/the-pillows.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  
+.the-pillows-background-text {
+  color: #fff;
+  text-shadow: $secondaryColor 1px 2px 1px;
+}
+
+#presentation {
+  &:first-child p:first-child {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    font-size: 4rem;
+    color: #fff;
+  }
+}
+
+#compilation {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+#ranking {
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+
+  h2 {
+    margin-bottom: 5rem;
+  }
+}
+  
+.song-winner-size {
+  font-size: 1.1rem;
+}
+  
+.yeah-overall-emoji-size {
+  font-size: 1.3rem;
+}
+
+#ranking-yeah-counter-row-1,
+#ranking-yeah-counter-row-2 {
+  h3 {
+    font-size: 2rem;
+    padding-top: .2em;
+  }
+}
+
+.yeah-total {
+  background-color: $primaryColor;
+  border: 1px solid darken($primaryColor, 10%);
+}
+
+.yeah-podium-numbers {
+  font-size: 3.5rem; 
+}
+
+.yeah-first-position {
+  color: $firstPositionColor;
+}
+
+.yeah-second-position {
+  color: $secondPositionColor;
+}
+
+.yeah-third-position {
+  color: $thirdPositionColor;
+}
+
+#yeah-overall,
+#all-yeah-songs {
+  max-width: 1140px;
+}
+
+#yeah-overall {
+  margin-top: 2rem;
+}
+
+.number-of-yeah-charts {
+  position: relative;
+  width: 62.5em;
+  height: 37.5em;
+}
+
+#yeahs-per-year-container,
+#yeahs-per-decade-container,
+#yeahs-per-label-company-container {
+  background-color: #f8f8f8;
+}
+
+.page-item.active .page-link {
+  background-color: $primaryColor;
+  border-color: $secondaryColor;
+  color: $secondaryColor;
+}
+
+.page-link {
+  color: $primaryColor;
+}
+
+.page-link:hover {
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+  color: $secondaryColor;
+}
+
+.page-link:focus {
+  box-shadow: 0 0 0 0 #fff;
+}
+
+#thepillowsAllSongs-table {
+  text-align: center;
+}
+
+#thepillowsAllSongs-table thead {
+  background-color: $primaryColor;
+}
+
+#disqus_thread {
+    min-height: 100px;
+}
+
+footer {
+  background-color: $secondaryColor;
+}
+  
+@media (max-width: 240em) {
+  .h1, h1 {
+    font-size: $resolution4KtitleSize;
+  }
+
+  .h2, h2 {
+    font-size: $resolution4KSecondtitleSize;
+  }
+
+  .the-pillows-background-text {
+    text-shadow: #000 4px 3px 3px;
+  }
+
+  #presentation {
+    &:first-child p:first-child {
+      font-size: 9rem;
+      margin-bottom: 8rem;
+    }
+
+    p {
+      font-size: 6rem;
+    }
+  }
+
+  #compilation {
+    font-size: 1.3rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  .album {
+    font-size: 1.1rem;
+  }
+
+  #yeah-overall,
+  #all-yeah-songs {
+    max-width: 2100px;
+  }
+
+  .number-of-yeah-charts {
+    margin-top: 1rem;
+  }
+
+  #yeahs-per-year-container,
+  #yeahs-per-decade-container,
+  #yeahs-per-label-company-container,
+  #all-yeah-songs {
+    h3 {
+      font-size: 2.5rem;
+    }
+  }
+
+  #yeahs-per-year-container {
+    margin-top: 5rem;
+  }
+
+  .number-of-yeah-charts {
+    width: 118.75em;
+    height: 50em;
+  }
+}
+
+@media (max-width: 160em) {
+  .h1, h1 {
+    font-size: $resolution2KtitleSize;
+  }
+
+  .h2, h2 {
+    font-size: $resolution4KSecondtitleSize;
+  }
+
+  #presentation {
+    &:first-child p:first-child {
+      font-size: 7.5rem;
+      margin-bottom: 8rem;
+    }
+
+    p {
+      font-size: 5rem;
+    }
+  }
+
+  #compilation {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+
+  #yeah-overall,
+  #all-yeah-songs {
+    max-width: 1140px;
+  }
+
+  .number-of-yeah-charts {
+    width: 62.5em;
+    height: 37.5em;
+  }
+}
+
+@media (max-width: 120em) {
+  .h1, h1 {
+    font-size: $resolution1080titleSize;
+  }
+
+  .h2, h2 {
+    font-size: $resolution1080titleSize;
+  }
+
+  .the-pillows-background-text {
+    text-shadow: #000 2px 3px 2px;
+  }
+
+  #presentation {
+    &:first-child p:first-child {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+    }
+
+    p {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (max-width: 62em) {
+  .col {
+    flex-basis: auto;
+  }
+}

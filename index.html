@@ -4,23 +4,27 @@
     <title>the pillows 'yeah' counter Chart</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Chart that counts the number of 'yeah' said by the japanese band the pillows."/>
+    <meta name="description" content="Chart that counts the number of 'yeah' said by the japanese band 'the pillows'."/>
     <meta name="keywords" content="the pillows, japanese band, rock, chart, yeah, oh yeah"/>
     <meta property="og:url" content="https://thepillows-ohyeah.github.io/"/>
     <meta property="og:title" content="the pillows 'yeah' counter Chart"/>
-    <meta property="og:description" content="Chart that counts the number of 'yeah' said by the japanese band the pillows."/>
+    <meta property="og:description" content="Chart that counts the number of 'yeah' said by the japanese band 'the pillows'."/>
     <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/4/40/The_Pillows_Band.jpg"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.css" integrity="sha512-YnP4Ql71idaMB+/ZG38+1adSSQotdqvixQ+dQg8x/IFA4heIj6i0BC31W5T5QUdK1Uuwa01YdqdcT42q+RldAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
   </head>
   <body>
     <div id="app">
-      <div class="d-flex flex-column flex-wrap text-center mb-5 pt-3">
-        <h1 id="title-page" class="mb-3">the pillows <span id="yeah-title">yeah</span> counter Chart</h1>
+      <div class="d-flex flex-column flex-wrap text-center mb-5">
+        <h1 id="title-page" class="mb-2 mt-2">the pillows <span id="yeah-title">yeah</span> counter Chart</h1>
         <div class="d-flex align-items-center the-pillows-background font-weight-bold">
           <div id="presentation" class="mx-auto the-pillows-background-text">
-            <p class="mb-5 font-weight-bold display-3">OH YEAH?</p>
+            <p class="font-weight-bold display-3">OH YEAH?</p>
             <p class="font-weight-bold h1">Do you know me!?</p>
             <p class="font-weight-bold h1">Our name is <strong>
               <a href="https://en.wikipedia.org/wiki/The_Pillows" target="_blank">the pillows</a></strong>, OK?
@@ -29,102 +33,90 @@
         </div>
       </div>
 
-      <b-container class="mb-5 pt-5" fluid>
+      <b-container class="mb-5" fluid>
         <b-row>
           <b-col cols="12">
             <h1 class="text-center mb-5 font-weight-bold">"Oh Yeah" examples compilation</h1>
           </b-col>
         </b-row>
         <b-row>
-          <b-col cols="12">
+          <b-col cols="12" id="compilation">
             <p>In order to the context of these charts, some examples of <strong>"oh yeah"</strong> catch-phrase compilation that vocalist Sawao Yamanaka says in many songs, although present charts <strong><ins>actually only counting "yeah", and not "oh yeah"</ins></strong>.</p>
             <p>The video's original author below is <a href="https://www.youtube.com/user/sononamida/" target="_blank">sononamida</a>, so watch it directly from YouTube as appreciation.</p>
           </b-col>
         </b-row>
   
-        <b-row class="justify-content-md-center row mb-5 mt-5">
+        <b-row class="justify-content-md-center row mb-5 mt-3">
           <b-col cols="6">
-            <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/Y08_zl7Qhdg" allowfullscreen></b-embed>
+            <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/Y08_zl7Qhdg" allowfullscreen crossorigin="anonymous"></b-embed>
           </b-col>
           <b-col cols="6">
-            <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/z3mqVlymwVA" allowfullscreen></b-embed>
+            <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/z3mqVlymwVA" allowfullscreen crossorigin="anonymous"></b-embed>
           </b-col>
         </b-row>
       </b-container>
   
-      <b-container class="mb-3 pt-5" fluid>
+      <b-container id="ranking" fluid @scroll="scrollManager" ref="scrollParent">
         <b-row>
           <b-col>
-            <h2 class="text-center mb-5 font-weight-bold">Yeah Ranking Songs</h2>
+            <h2 class="text-center font-weight-bold">Yeah Ranking Songs</h2>
           </b-col>
         </b-row>
   
-        <b-row>
+        <b-row id="ranking-yeah-counter-row-1">
           <b-col class="mx-auto mb-5 yeah-total">
             <h3 class="font-weight-bold text-center mb-3">Total current "yeahs"</h3>
             <div class="text-center mb-3">
-              <div class="text-center winning-emoji-size">🏆</div>
-              <span class="yeah-podium-numbers font-weight-bold text-center text-success">647</span>
+              <span class="yeah-podium-numbers font-weight-bold text-center">647</span>
             </div>
           </b-col>
 
           <b-col class="mx-auto mb-5">
-            <h3 class="text-center mb-3">1<sup>st</sup> song with more "yeah"</h3>
-            <div class="yeah-podium-container d-flex mx-auto mb-3">
-              <div class="text-center winning-emoji-size">🥇</div>
-            </div>
+            <h3 class="text-center mb-3 font-weight-bold">1<sup>st</sup> song</h3>
             <p class="yeah-podium-numbers yeah-first-position font-weight-bold text-center align-self-center">76</p>
             <p class="font-weight-bold text-center song-winner-size">Like a Lovesong (Back to Back)</p>
-            <p class="text-center">Album: Little Busters (1998)</p>
+            <p class="text-center album">Album: Little Busters (1998)</p>
           </b-col>
   
           <b-col class="mx-auto mb-5">
-            <h3 class="text-center mb-3">2<sup>nd</sup> song with more "yeah"</h3>
-            <div class="yeah-podium-container d-flex mx-auto mb-3">
-              <div class="text-center winning-emoji-size">🥈</div>
-            </div>
+            <h3 class="text-center mb-3 font-weight-bold">2<sup>nd</sup> song</h3>
             <p class="yeah-podium-numbers yeah-second-position font-weight-bold text-center align-self-center">42</p>
             <p class="font-weight-bold text-center song-winner-size">Rookie Jet</p>
-            <p class="text-center">Album: Thank you, My Twilight (2002)</p>
+            <p class="text-center album">Album: Thank you, My Twilight (2002)</p>
           </b-col>
 
           <b-col class="mx-auto mb-5">
-            <h3 class="text-center mb-3">3<sup>rd</sup> song with more "yeah"</h3>
-            <div class="yeah-podium-container d-flex mx-auto mb-3">
-              <div class="text-center winning-emoji-size">🥉</div>
-            </div>
+            <h3 class="text-center mb-3 font-weight-bold">3<sup>rd</sup> song</h3>
             <p class="yeah-podium-numbers yeah-third-position font-weight-bold text-center align-self-center">35</p>
             <p class="font-weight-bold text-center song-winner-size">Back Seat Dog</p>
-            <p class="text-center">Album: Happy Bivouac (1999)</p>
+            <p class="text-center album">Album: Happy Bivouac (1999)</p>
           </b-col>
         </b-row>
   
-        <b-row>
+        <b-row id="ranking-yeah-counter-row-2">
           <b-col cols-md="6" class="mx-auto mb-5">
-            <h3 class="text-center mb-3">1<sup>st</sup> "yeah" song</h3>
+            <h3 class="text-center mb-3 font-weight-bold">1<sup>st</sup> "yeah" song</h3>
             <div class="text-center mb-3">
-              <div class="text-center winning-emoji-size">🏆</div>
               <span class="font-weight-bold text-center text-success song-winner-size">Never Find</span>
             </div>
-            <p class="text-center">Album: 90's My Life (1990)</p>
+            <p class="text-center album">Album: 90's My Life (1990)</p>
           </b-col>
   
           <b-col cols-md="6" class="mx-auto mb-5">
-            <h3 class="text-center mb-3">Last "yeah" song</h3>
+            <h3 class="text-center mb-3 font-weight-bold">Last "yeah" song</h3>
             <div class="text-center mb-3">
-              <div class="text-center winning-emoji-size">🏆</div>
               <span class="font-weight-bold text-center text-danger song-winner-size">Before going bed</span>
             </div>
-            <p class="text-center">Album: Rebroadcast (2018)</p>
+            <p class="text-center album">Album: Rebroadcast (2018)</p>
           </b-col>
         </b-row>
   
-        <b-container class="mb-5 pt-5">
+        <b-container id="yeah-overall">
           <b-row>
-            <h1 class="mx-auto mb-5 font-weight-bold">Yeah Overall</h1>
+            <h1 class="mx-auto font-weight-bold">Yeah Overall</h1>
           </b-row>
   
-          <b-row class="mb-3">
+          <b-row class="mb-2">
             <b-col cols="12">
               <p class="mb-2">Total years with some "yeahs"! <span class="yeah-overall-emoji-size">😀</span></p>
               <b-progress :max="yeahMax" height="1.5rem" variant="success" show-progress class="mb-2">
@@ -134,7 +126,7 @@
           </b-row>
   
           <b-row>
-            <b-col cols="12" class="mb-3">
+            <b-col cols="12" class="mb-2">
               <p class="mb-2">Total years with "yeahs" in a row! <span class="yeah-overall-emoji-size">😄</span></p>
               <b-progress :max="yeahMax" height="1.5rem" variant="success" show-progress class="mb-2">
                 <b-progress-bar :value="yeahInRow" :label="`${ yeahInRow } years`"></b-progress-bar>
@@ -143,7 +135,7 @@
           </b-row>
   
           <b-row>
-            <b-col cols="12" class="mb-3">
+            <b-col cols="12" class="mb-2">
               <p class="mb-2">Total years with no "yeahs" <span class="yeah-overall-emoji-size">☹️</span></p>
               <b-progress :max="yeahMax" height="1.5rem" variant="danger" show-progress class="mb-2">
                 <b-progress-bar :value="noYeahs" :label="`${ noYeahs } years`"></b-progress-bar>
@@ -160,7 +152,7 @@
           </b-col>
         </b-row>
         <b-row>
-          <div class="number-of-yeah-charts number-of-yeah-per-company mx-auto">
+          <div class="number-of-yeah-charts mx-auto">
             <canvas id="yeahsPerYearChart"></canvas>
           </div>
         </b-row>
@@ -173,7 +165,7 @@
           </b-col>
         </b-row>
         <b-row>
-          <div class="number-of-yeah-charts number-of-yeah-per-company mx-auto">
+          <div class="number-of-yeah-charts mx-auto">
             <canvas id="yeahsPerDecadeChart"></canvas>
           </div>
         </b-row>
@@ -186,13 +178,13 @@
           </b-col>
         </b-row>
         <b-row>
-          <div class="number-of-yeah-charts number-of-yeah-per-company mx-auto">
+          <div class="number-of-yeah-charts mx-auto">
             <canvas id="yeahsPerLabelCompanyChart"></canvas>
           </div>
         </b-row>
       </b-container>
       
-      <b-container class="mb-5 pt-5">
+      <b-container id="all-yeah-songs" class="mb-5 pt-5">
         <b-row>
           <b-col cols="12">
             <h3 class="text-center mb-5 font-weight-bold">the pillows all "yeah" songs</h3>
@@ -216,7 +208,7 @@
   
       <div id="disqus_thread" class="comments container-fluid mb-5"></div> 
   
-      <footer class="bg-dark pt-4 pb-2">
+      <footer class="pt-4 pb-2">
         <b-container fluid>
           <b-row>
             <b-col cols="6">
@@ -230,16 +222,17 @@
       </footer>
     </div>
 
-    <script type="text/x-template" id="pagination-template">
+    <script type="text/x-template" id="pagination">
       <b-pagination	@input="$emit('input', $event)" :value="value" :total-rows="rows" :per-page="perPage" aria-controls="discos-table" class="mt-4 mb-5" align="center" pills></b-pagination>
     </script>
     
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js" integrity="sha512-XdUZ5nrNkVySQBnnM5vzDqHai823Spoq1W3pJoQwomQja+o4Nw0Ew1ppxo5bhF2vMug6sfibhKWcNJsG8Vj9tg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.js" integrity="sha512-Z0dNfC81uEXC2iTTXtE0rM18I3ATkwn1m8Lxe0onw/uPEEkCmVZd+H8GTeYGkAZv50yvoSR5N3hoy/Do2hNSkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168710081-1"></script>
-    <script src="js/main.js"></script>
-    <script src="js/charts.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/charts.js"></script>
   </body>
   <!-- Made by https://github.com/alan-garcia -->
 </html>
