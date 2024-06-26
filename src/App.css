@@ -166,3 +166,24 @@ a {
 .ranking-first-last-yeah-song {
   justify-content: space-around;
 }
+
+#yeah-overall {
+  margin-top: 2rem;
+
+  p {
+    margin-bottom: .5rem;
+  }
+}
+
+.yeah-overall-container {
+  margin: auto;
+  width: 1000px;
+}
+
+.yeah-overall-row {
+  margin-bottom: 1rem;
+}
+
+.yeah-overall-emoji-size {
+  font-size: 1.3rem;
+}

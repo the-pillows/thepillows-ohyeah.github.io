@@ -1,4 +1,27 @@
+import { styled } from '@mui/system';
+import { LinearProgress, Box, Typography } from '@mui/material';
 import './App.css'
+
+const CustomLinearProgress = styled(LinearProgress)(({ theme }) => ({
+  height: 24,
+  backgroundColor: '#e9ecef'
+}));
+
+function ProgressWithLabel({ value, size, color }) {
+  return (
+    <Box position="relative" width="100%">
+      <CustomLinearProgress variant="determinate" value={value} size={size} 
+        sx={{ '& .MuiLinearProgress-bar': {
+            backgroundColor: `${color}`
+          }
+        }} />
+      <Box top={0} left={0} bottom={0} right={0} position="absolute"
+        display="flex">
+        <Typography sx={{ marginLeft: ".5rem", color: "#fff" }}>{`${value}`}</Typography>
+      </Box>
+    </Box>
+  );
+}
 
 function App() {
   return (
@@ -80,6 +103,30 @@ function App() {
                 </div>
                 <p className="text-center album">Album: Rebroadcast (2018)</p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="yeah-overall">
+          <h1 className="title">Yeah Overall</h1>
+
+          <div className='yeah-overall-container'>
+            <div className='yeah-overall-row'>
+              <p>Total years with some "yeahs"! <span className="yeah-overall-emoji-size">😀</span>
+              </p>
+              <ProgressWithLabel value={24} size={35} color={`#28a745`} />
+            </div>
+
+            <div className='yeah-overall-row'>
+              <p>Total years with "yeahs" in a row! <span className="yeah-overall-emoji-size">😄</span>
+              </p>
+              <ProgressWithLabel value={16} size={35} color={`#28a745`} />
+            </div>
+            
+            <div className='yeah-overall-row'>
+              <p>Total years with no "yeahs" <span className="yeah-overall-emoji-size">☹️</span>
+              </p>
+              <ProgressWithLabel value={10} size={35} color={`#dc3545`} />
             </div>
           </div>
         </div>
