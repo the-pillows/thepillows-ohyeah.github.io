@@ -1,6 +1,67 @@
-#root {
-  max-width: 1280px;
+/* #root {
   margin: 0 auto;
   padding: 2rem;
+} */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+#root {
+  --primaryColor: #ffbc09;
+  --secondaryColor: #404040;
+  --firstPositionColor: #d4af37;
+  --secondPositionColor: #c0c0c0;
+  --thirdPositionColor: #cb6d51;
+}
+
+h1, h2, h3, p, span, th, td {
+  color: var(--secondaryColor);
+}
+
+a {
+  color: var(--primaryColor);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+  
+::selection {
+  color: var(--secondaryColor);
+  background-color: var(--primaryColor);
+}
+
+#presentation {
+  font-weight: 700;
+  margin: auto;
   text-align: center;
+
+  & p:first-child {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  & p {
+    font-size: 3rem;
+    color: #fff;
+  }
+}
+
+.the-pillows-background {
+  height: 100vh;
+  background-attachment: fixed;
+  background-image: url("../src/images/the-pillows.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-content: center;
+}
+
+.the-pillows-background-text {
+  text-shadow: #000 2px 3px 2px;
 }
