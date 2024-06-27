@@ -66,9 +66,14 @@ a {
   text-shadow: #000 2px 3px 2px;
 }
 
+.container-full {
+  margin: 0 auto;
+  padding: 3rem 0;
+  width: 100%;
+}
+
 .container {
   margin: 0 auto;
-  padding: 3rem;
   width: 1536px;
 }
 
@@ -170,7 +175,7 @@ a {
 }
 
 #yeah-overall {
-  margin-top: 2rem;
+  margin-top: 5rem;
 
   p {
     margin-bottom: .5rem;
