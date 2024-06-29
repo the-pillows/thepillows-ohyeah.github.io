@@ -60,6 +60,7 @@ a {
   background-size: cover;
   display: flex;
   align-content: center;
+  margin-bottom: 5rem;
 }
 
 .the-pillows-background-text {
@@ -68,7 +69,6 @@ a {
 
 .container-full {
   margin: 0 auto;
-  padding: 3rem 0;
   width: 100%;
 }
 
@@ -222,4 +222,20 @@ a {
   width: 100%;
   padding: .5rem .7rem;
   margin-bottom: 2rem;
+}
+
+#disqus_thread {
+  min-height: 100px;
+  margin-bottom: 4rem;
+}
+
+footer {
+  background-color: var(--secondaryColor);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+
+  p {
+    color: #fff;
+  }
 }

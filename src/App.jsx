@@ -1,9 +1,38 @@
+import { useEffect } from 'react';
 import { YeahsPerDecadeBarChart, YeahsPerLabelCompanyBarChart, YeahsPerYearBarChart } from './components/Charts';
 import { ProgressWithLabel } from './components/Progress';
 import ThePillowsSongsTable from './components/Table';
 import './App.css';
 
 function App() {
+  let isDisqusShow = false;
+
+  useEffect(() => {
+      const onScroll = () => {
+        const scrollPosition = document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight;
+        const disqusPosition = scrollPosition + windowHeight;
+    
+        let disqusElement = document.querySelector("#disqus_thread");
+        const disqusElementOffsetTop = disqusElement.getBoundingClientRect().top + scrollPosition - 100;
+
+        if (disqusPosition >= disqusElementOffsetTop && !isDisqusShow) {
+          console.log("Cargar comentarios"); 
+          loadDisqusComments();
+          isDisqusShow = true;
+        }
+      }
+      
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const loadDisqusComments = () => {
+    window.disqus_config=function(){this.page.url="https://thepillows-ohyeah.github.io/",this.page.identifier="thepillows-ohyeah"};
+    !function(){let e=document,t=e.createElement("script");t.async=true,t.src="https://thepillows-ohyeah.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)}();
+  }
+
   return (
     <>
       <div className="the-pillows-background">
@@ -146,6 +175,19 @@ function App() {
             <ThePillowsSongsTable />
           </div>
         </div>
+
+        <div className='container'>
+          <div id="disqus_thread" className="comments container-fluid mb-5"></div>
+        </div>
+
+        <footer>
+          <div>
+            <p>Source: My boredom due to COVID-19 crisis.</p>
+          </div>
+          <div>
+            <p>With 💛 from Spain</p>
+          </div>
+        </footer>
       </div>
     </>
   )
