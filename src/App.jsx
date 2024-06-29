@@ -1,6 +1,7 @@
 import { YeahsPerDecadeBarChart, YeahsPerLabelCompanyBarChart, YeahsPerYearBarChart } from './components/Charts';
 import { ProgressWithLabel } from './components/Progress';
-import './App.css'
+import ThePillowsSongsTable from './components/Table';
+import './App.css';
 
 function App() {
   return (
@@ -135,6 +136,14 @@ function App() {
 
           <div className='yeahs-per-label-company'>
             <YeahsPerLabelCompanyBarChart width={1000} height={600} />
+          </div>
+        </div>
+
+        <div id="all-yeah-songs-container">
+          <h3 className="title">the pillows all "yeah" songs</h3>
+
+          <div className='all-yeah-songs'>
+            <ThePillowsSongsTable />
           </div>
         </div>
       </div>
