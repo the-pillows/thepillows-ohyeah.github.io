@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import CountUp from 'react-countup';
 import { YeahsPerDecadeBarChart, YeahsPerLabelCompanyBarChart, YeahsPerYearBarChart } from './components/Charts';
 import { ProgressWithLabel } from './components/Progress';
 import ThePillowsSongsTable from './components/Table';
@@ -11,13 +12,12 @@ function App() {
       const onScroll = () => {
         const scrollPosition = document.documentElement.scrollTop;
         const windowHeight = window.innerHeight;
-        const disqusPosition = scrollPosition + windowHeight;
+        const disqusElementPosition = scrollPosition + windowHeight;
     
         let disqusElement = document.querySelector("#disqus_thread");
         const disqusElementOffsetTop = disqusElement.getBoundingClientRect().top + scrollPosition - 100;
 
-        if (disqusPosition >= disqusElementOffsetTop && !isDisqusShow) {
-          console.log("Cargar comentarios"); 
+        if (disqusElementPosition >= disqusElementOffsetTop && !isDisqusShow) {
           loadDisqusComments();
           isDisqusShow = true;
         }
@@ -71,7 +71,9 @@ function App() {
                 <div className="yeah-total">
                   <h3>Total current "yeahs"</h3>
                   <div>
-                    <span className="yeah-podium-numbers">647</span>
+                    <span className="yeah-podium-numbers">
+                      <CountUp start={0} end={647} duration={5} useEasing={true} enableScrollSpy={true} scrollSpyOnce={true} />
+                    </span>
                   </div>
                 </div>
               </div>
@@ -79,21 +81,27 @@ function App() {
               <div className='ranking-top-3'>
                 <div>
                   <h3>1<sup>st</sup> song</h3>
-                  <p className="yeah-podium-numbers yeah-first-position">76</p>
+                  <p>
+                    <CountUp className="yeah-podium-numbers yeah-first-position" start={0} end={76} duration={5} useEasing={true} enableScrollSpy={true} scrollSpyOnce={true} />
+                  </p>
                   <p className="song-winner-size">Like a Lovesong (Back to Back)</p>
                   <p className="text-center album">Album: Little Busters (1998)</p>
                 </div>
 
                 <div>
                   <h3>2<sup>nd</sup> song</h3>
-                  <p className="yeah-podium-numbers yeah-second-position">42</p>
+                  <p>
+                    <CountUp className="yeah-podium-numbers yeah-second-position" start={0} end={42} duration={5} useEasing={true} enableScrollSpy={true} scrollSpyOnce={true} />
+                  </p>
                   <p className="song-winner-size">Rookie Jet</p>
                   <p className="text-center album">Album: Thank you, My Twilight (2002)</p>
                 </div>
 
                 <div>
                   <h3>3<sup>rd</sup> song</h3>
-                  <p className="yeah-podium-numbers yeah-third-position">35</p>
+                  <p>
+                    <CountUp className='yeah-podium-numbers yeah-third-position' start={0} end={35} duration={5} useEasing={true} enableScrollSpy={true} scrollSpyOnce={true} />
+                  </p>
                   <p className="song-winner-size">Back Seat Dog</p>
                   <p className="text-center album">Album: Happy Bivouac (1999)</p>
                 </div>
