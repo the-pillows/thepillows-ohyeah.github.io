@@ -50,9 +50,11 @@ function App() {
           <h1 className='title'>"Oh Yeah" examples compilation</h1>
 
           <div id="compilation">
-            <p>In order to the context of these charts, some examples of <strong>"oh yeah"</strong> catch-phrase compilation that vocalist Sawao Yamanaka says in many songs, although present charts <strong><ins>actually only counting "yeah", and not "oh yeah"</ins></strong>.</p>
+            <p>This band is known, among other things, for the countless times that vocalist Sawao Yamanaka says <strong><em>'oh yeah'</em></strong> in many of their songs.</p>
+            
+            <p>Therefore, I'll show you a small compilation about that, and next, I'll breakdown several charts that counts the number of every 'oh yeah' of all his songs. To simplify this measurement, <strong>I will only count the times he says 'yeah', and not 'oh yeah' as a whole word</strong>.</p>
 
-            <p>The video's original author below is <a href="https://www.youtube.com/user/sononamida/" target="_blank">sononamida</a>, so watch it directly from YouTube as appreciation.</p>
+            <p>The following videos belongs to the author <a href="https://www.youtube.com/user/sononamida/" target="_blank">sononamida</a>, so watch it directly from YouTube as appreciation.</p>
 
             <div id="compilation-video">
               <iframe width="640" height="480" src="https://www.youtube.com/embed/Y08_zl7Qhdg" allowFullScreen style={{ border: 'none' }}></iframe>
@@ -153,33 +155,29 @@ function App() {
         </div>
         
         <div id="yeahs-per-year-container">
-          <h3 className="title">Number of "yeahs" per year</h3>
-
-          <div className='yeahs-per-year'>
-            <YeahsPerYearBarChart width={1000} height={800} colorBar={"rgba(255, 188, 9, .6)"} />
+          <div className='yeahs-per-year container'>
+            <h3 className="title">Number of "yeahs" per year</h3>
+            <YeahsPerYearBarChart width={1000} height={700} colorBar={"rgba(255, 188, 9, .6)"} />
           </div>
         </div>
 
         <div id="yeahs-per-decade-container">
-          <h3 className="title">Number of "yeahs" per decade</h3>
-
-          <div className='yeahs-per-decade'>
+          <div className='yeahs-per-decade container'>
+            <h3 className="title">Number of "yeahs" per decade</h3>
             <YeahsPerDecadeBarChart width={1000} height={600} colorBar={"rgba(255, 188, 9, .6)"} />
           </div>
         </div>
 
         <div id="yeahs-per-label-company-container">
-          <h3 className="title">Number of "yeahs" per label company</h3>
-
-          <div className='yeahs-per-label-company'>
+          <div className='yeahs-per-label-company container'>
+            <h3 className="title">Number of "yeahs" per label company</h3>
             <YeahsPerLabelCompanyBarChart width={1000} height={600} />
           </div>
         </div>
 
         <div id="all-yeah-songs-container">
-          <h3 className="title">the pillows all "yeah" songs</h3>
-
-          <div className='all-yeah-songs'>
+          <div className='all-yeah-songs container'>
+            <h3 className="title">the pillows all "yeah" songs</h3>
             <ThePillowsSongsTable />
           </div>
         </div>
