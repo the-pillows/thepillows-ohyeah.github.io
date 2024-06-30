@@ -176,7 +176,7 @@ function App() {
         </div>
 
         <div id="all-yeah-songs-container">
-          <div className='all-yeah-songs container'>
+          <div className='all-yeah-songs'>
             <h3 className="title">the pillows all "yeah" songs</h3>
             <ThePillowsSongsTable />
           </div>
