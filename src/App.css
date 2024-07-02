@@ -250,6 +250,12 @@ footer {
   }
 }
 
+@media (width <= 1200px) {
+  #all-yeah-songs-container {
+    width: 100%;
+  }
+}
+
 @media (width <= 900px) {
   .ranking-top-3,
   .ranking-first-last-yeah-song {

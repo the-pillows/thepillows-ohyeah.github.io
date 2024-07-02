@@ -41,11 +41,11 @@ const ThePillowsSongsTable = () => {
 
   const columns = [
     { field: 'id', headerName: '#', width: 60 },
-    { field: 'songName', headerName: 'Song Name', width: 400 },
-    { field: 'albumName', headerName: 'Album Name', width: 255 },
-    { field: 'discType', headerName: 'Disc Type', width: 120 },
+    { field: 'songName', headerName: 'Song Name', width: 400, flex: 1 },
+    { field: 'albumName', headerName: 'Album Name', width: 255, flex: 1 },
+    { field: 'discType', headerName: 'Disc Type', width: 115 },
     { field: 'year', headerName: 'Year', type: 'number', width: 80 },
-    { field: 'numberOfYeah', headerName: 'Number of Yeah', type: 'number', width: 155, flex: 1 }
+    { field: 'numberOfYeah', headerName: 'Yeahs', type: 'number', width: 90 }
   ];
 
   return (
@@ -53,7 +53,7 @@ const ThePillowsSongsTable = () => {
       <input id="search-song" name="search-song" type="search" value={searchTerm} onChange={handleSearchChange} placeholder="Search a song, album, disc type, or year" />
 
       <Box>
-        <DataGrid columns={columns} rows={filteredSongs} pageSizeOptions={[10]} 
+        <DataGrid columns={columns} rows={filteredSongs} pageSizeOptions={[10]} density='compact'
             initialState={{
               sorting: {
                 sortModel: [{ field: "numberOfYeah", sort: "desc" }],
