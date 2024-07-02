@@ -74,7 +74,9 @@ function App() {
                   <h3>Total current "yeahs"</h3>
                   <div>
                     <span className="yeah-podium-numbers">
-                      <CountUp start={0} end={647} duration={5} useEasing={true} enableScrollSpy={true} scrollSpyOnce={true} />
+                      <CountUp start={0} end={647} duration={4} scrollSpyDelay={200} useEasing scrollSpyOnce enableScrollSpy>
+                        {({ countUpRef }) => <span ref={countUpRef} />}
+                      </CountUp>
                     </span>
                   </div>
                 </div>
@@ -84,7 +86,9 @@ function App() {
                 <div>
                   <h3>1<sup>st</sup> song</h3>
                   <p>
-                    <CountUp className="yeah-podium-numbers yeah-first-position" start={0} end={76} duration={5} useEasing={true} enableScrollSpy={true} scrollSpyOnce={true} />
+                    <CountUp start={0} end={76} duration={5} scrollSpyDelay={200} useEasing scrollSpyOnce enableScrollSpy>
+                      {({ countUpRef }) => <span className="yeah-podium-numbers yeah-first-position" ref={countUpRef} />}
+                    </CountUp>
                   </p>
                   <p className="song-winner-size">Like a Lovesong (Back to Back)</p>
                   <p className="text-center album">Album: Little Busters (1998)</p>
@@ -93,7 +97,9 @@ function App() {
                 <div>
                   <h3>2<sup>nd</sup> song</h3>
                   <p>
-                    <CountUp className="yeah-podium-numbers yeah-second-position" start={0} end={42} duration={5} useEasing={true} enableScrollSpy={true} scrollSpyOnce={true} />
+                    <CountUp start={0} end={42} duration={5} scrollSpyDelay={200} useEasing scrollSpyOnce enableScrollSpy>
+                      {({ countUpRef }) => <span className="yeah-podium-numbers yeah-second-position" ref={countUpRef} />}
+                    </CountUp>
                   </p>
                   <p className="song-winner-size">Rookie Jet</p>
                   <p className="text-center album">Album: Thank you, My Twilight (2002)</p>
@@ -102,7 +108,9 @@ function App() {
                 <div>
                   <h3>3<sup>rd</sup> song</h3>
                   <p>
-                    <CountUp className='yeah-podium-numbers yeah-third-position' start={0} end={35} duration={5} useEasing={true} enableScrollSpy={true} scrollSpyOnce={true} />
+                    <CountUp start={0} end={35} duration={5} scrollSpyDelay={200} useEasing scrollSpyOnce enableScrollSpy>
+                      {({ countUpRef }) => <span className='yeah-podium-numbers yeah-third-position' ref={countUpRef} />}
+                    </CountUp>
                   </p>
                   <p className="song-winner-size">Back Seat Dog</p>
                   <p className="text-center album">Album: Happy Bivouac (1999)</p>
