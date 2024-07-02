@@ -83,7 +83,7 @@ function App() {
               </div>
               
               <div className='ranking-top-3'>
-                <div>
+                <div className='ranking-card'>
                   <h3>1<sup>st</sup> song</h3>
                   <p>
                     <CountUp start={0} end={76} duration={5} scrollSpyDelay={200} useEasing scrollSpyOnce enableScrollSpy>
@@ -91,10 +91,10 @@ function App() {
                     </CountUp>
                   </p>
                   <p className="song-winner-size">Like a Lovesong (Back to Back)</p>
-                  <p className="text-center album">Album: Little Busters (1998)</p>
+                  <p>Album: Little Busters (1998)</p>
                 </div>
 
-                <div>
+                <div className='ranking-card'>
                   <h3>2<sup>nd</sup> song</h3>
                   <p>
                     <CountUp start={0} end={42} duration={5} scrollSpyDelay={200} useEasing scrollSpyOnce enableScrollSpy>
@@ -102,10 +102,10 @@ function App() {
                     </CountUp>
                   </p>
                   <p className="song-winner-size">Rookie Jet</p>
-                  <p className="text-center album">Album: Thank you, My Twilight (2002)</p>
+                  <p>Album: Thank you, My Twilight (2002)</p>
                 </div>
 
-                <div>
+                <div className='ranking-card'>
                   <h3>3<sup>rd</sup> song</h3>
                   <p>
                     <CountUp start={0} end={35} duration={5} scrollSpyDelay={200} useEasing scrollSpyOnce enableScrollSpy>
@@ -113,25 +113,25 @@ function App() {
                     </CountUp>
                   </p>
                   <p className="song-winner-size">Back Seat Dog</p>
-                  <p className="text-center album">Album: Happy Bivouac (1999)</p>
+                  <p>Album: Happy Bivouac (1999)</p>
                 </div>
               </div>
 
               <div className='ranking-first-last-yeah-song'>
-                <div>
-                  <h3 className="text-center mb-3 font-weight-bold">1<sup>st</sup> "yeah" song</h3>
-                  <div className="text-center mb-3">
+                <div className='ranking-card'>
+                  <h3>1<sup>st</sup> "yeah" song</h3>
+                  <div>
                     <p className="song-first-yeah song-winner-size">Never Find</p>
                   </div>
-                  <p className="text-center album">Album: 90's My Life (1990)</p>
+                  <p>Album: 90's My Life (1990)</p>
                 </div>
 
-                <div>
-                  <h3 className="text-center mb-3 font-weight-bold">Last "yeah" song</h3>
-                  <div className="text-center mb-3">
+                <div className='ranking-card'>
+                  <h3>Last "yeah" song</h3>
+                  <div>
                     <p className="song-last-yeah song-winner-size">Before going bed</p>
                   </div>
-                  <p className="text-center album">Album: Rebroadcast (2018)</p>
+                  <p>Album: Rebroadcast (2018)</p>
                 </div>
               </div>
             </div>
