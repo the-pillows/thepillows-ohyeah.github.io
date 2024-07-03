@@ -27,10 +27,11 @@ const ThePillowsSongsTable = () => {
 
   useEffect(() => {
     const filtered = songs.filter(row => 
-      Object.values(row).some(value =>
-        value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+      ["songName", "albumName", "year"].some(key =>
+        row[key]?.toString().toLowerCase().includes(searchTerm.toLowerCase())
       )
     );
+    
     setFilteredSongs(filtered);
   }, [searchTerm, songs]);
 
@@ -50,7 +51,7 @@ const ThePillowsSongsTable = () => {
 
   return (
     <>
-      <input id="tp-search-song" name="tp-search-song" type="search" value={searchTerm} onChange={handleSearchChange} placeholder="Search a song, album, disc type, or year" />
+      <input id="tp-search-song" name="tp-search-song" type="search" value={searchTerm} onChange={handleSearchChange} placeholder="Search a song, album, or year" />
 
       <Box>
         <DataGrid columns={columns} rows={filteredSongs} pageSizeOptions={[10]} density='compact'

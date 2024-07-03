@@ -31,7 +31,6 @@ a {
   background-color: var(--primaryColor);
 }
 
-/* EXAMPLES COMPILATION */
 .container-full {
   margin: 0 auto;
   width: 100%;
@@ -55,28 +54,8 @@ a {
   margin-bottom: 4rem;
 }
 
-footer {
-  background-color: var(--secondaryColor);
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 1rem;
-
-  p {
-    color: #fff;
-  }
-}
-
 @media (width <= 1536px) {
 	.container {
 	  width: 100%;
 	}
-}
-
-@media (width <= 600px) {
-  footer {
-    flex-flow: column wrap;
-    align-content: center;
-    text-align: center;
-    row-gap: 2rem;
-  }
 }

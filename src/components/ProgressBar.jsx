@@ -6,10 +6,10 @@ const CustomLinearProgress = styled(LinearProgress)(({ theme }) => ({
   backgroundColor: '#e9ecef'
 }));
   
-export function ProgressWithLabel({ value, size, color }) {
+export function ProgressBarWithLabel({ value, size, color }) {
     return (
       <Box position="relative" width="100%">
-        <CustomLinearProgress variant="determinate" value={value} size={size} 
+        <CustomLinearProgress variant="determinate" value={Math.round((100 / 35) * value)} size={size} 
           sx={{ '& .MuiLinearProgress-bar': {
               backgroundColor: `${color}`
             }

@@ -1,6 +1,8 @@
 #tp-yeah-overall {
-    margin-bottom: 5rem;
-  
+    margin: auto auto 8rem;
+    max-width: 800px;
+    width: 100%;
+
     p {
       margin-bottom: .5rem;
     }
