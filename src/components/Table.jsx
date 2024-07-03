@@ -50,7 +50,7 @@ const ThePillowsSongsTable = () => {
 
   return (
     <>
-      <input id="search-song" name="search-song" type="search" value={searchTerm} onChange={handleSearchChange} placeholder="Search a song, album, disc type, or year" />
+      <input id="tp-search-song" name="tp-search-song" type="search" value={searchTerm} onChange={handleSearchChange} placeholder="Search a song, album, disc type, or year" />
 
       <Box>
         <DataGrid columns={columns} rows={filteredSongs} pageSizeOptions={[10]} density='compact'
