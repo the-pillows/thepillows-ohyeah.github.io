@@ -31,38 +31,6 @@ a {
   background-color: var(--primaryColor);
 }
 
-/* HEADER */
-.tp-hero-bg {
-  height: 100vh;
-  background-attachment: fixed;
-  background-image: url("../src/images/the-pillows.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-content: center;
-  margin-bottom: 5rem;
-}
-
-.tp-hero-bg--text {
-  text-shadow: #000 2px 3px 2px;
-  font-weight: 700;
-  margin: auto;
-  text-align: center;
-
-  & p:first-child {
-    font-size: 5rem;
-    margin-bottom: 3rem;
-  }
-
-  & p {
-    font-size: 3rem;
-    color: #fff;
-  }
-}
-/* HEADER */
-
-/* MAIN */
-
 /* EXAMPLES COMPILATION */
 .container-full {
   margin: 0 auto;
@@ -82,161 +50,10 @@ a {
   text-align: center;
 }
 
-#tp-compilation {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-
-  & p {
-    margin-bottom: 1rem;
-  }
-}
-
-#tp-compilation-videos {
-  margin-top: 3rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  column-gap: 2rem;
-}
-/* EXAMPLES COMPILATION */
-
-/* RANKING SONGS */
-#tp-ranking-songs {
-  margin-top: 5rem;
-  margin-bottom: 8rem;
-}
-
-.tp-ranking-yeahs {
-  text-align: center;
-  display: grid;
-  grid-row-gap: 3rem;
-  column-gap: 1rem;
-
-  h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-}
-
-.tp-ranking-total-yeahs {
-  background-color: var(--primaryColor);
-  border: 1px solid var(--primaryColor);
-  border-radius: 5px;
-  width: fit-content;
-  margin: auto;
-  padding: 0 1rem;
-}
-
-.tp-ranking-podium-numbers {
-  display: inline-block;
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.tp-ranking-top3,
-.tp-ranking-first-last-yeah-song {
-  display: grid;
-  column-gap: 1rem;
-}
-
-.tp-ranking-card {
-  padding: 1rem;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.3),0 1px 2px -1px rgba(0,0,0,.3);
-}
-
-.tp-ranking-top3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.tp-ranking-first-position {
-  color: var(--firstPositionColor);
-}
-
-.tp-ranking-second-position {
-  color: var(--secondPositionColor);
-}
-
-.tp-ranking-third-position {
-  color: var(--thirdPositionColor);
-}
-
-.tp-ranking-song-winner {
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.tp-ranking-first-yeah {
-  color: #28a745;
-}
-
-.tp-ranking-last-yeah {
-  color: #dc3545;
-}
-
-.tp-ranking-first-last-yeah-song {
-  grid-template-columns: repeat(2, 1fr);
-}
-/* RANKING SONGS */
-
-/* YEAH OVERALL */
-#tp-yeah-overall {
-  margin-bottom: 5rem;
-
-  p {
-    margin-bottom: .5rem;
-  }
-}
-
-.tp-yeah-overall-container {
-  margin: auto;
-  width: 100%;
-}
-
-.tp-yeah-overall-row {
-  margin-bottom: 1rem;
-}
-/* YEAH OVERALL */
-
-/* YEAHS PER YEAR/DECADE/LABEL */
-#tp-tp-yeahs-per-year-container,
-#tp-yeahs-per-decade-container,
-#tp-yeahs-per-label-company-container {
-  background-color: #f8f8f8;
-  padding: 3rem 0;
-}
-
-.tp-yeahs-per-year,
-.tp-yeahs-per-decade,
-.tp-yeahs-per-label-company {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-}
-/* YEAHS PER YEAR/DECADE/LABEL */
-
-/* ALL YEAH SONGS */
-#tp-all-yeah-songs-container {
-  margin: 5rem auto;
-  padding: 0 2rem;
-  width: 1140px;
-}
-
-#tp-search-song {
-  border-radius: 5px;
-  border: 1px solid #ced4da;
-  font-size: 1rem;
-  width: 100%;
-  padding: .5rem .7rem;
-  margin-bottom: 2rem;
-}
-
 #disqus_thread {
   min-height: 100px;
   margin-bottom: 4rem;
 }
-/* ALL YEAH SONGS */
 
 footer {
   background-color: var(--secondaryColor);
@@ -250,28 +67,9 @@ footer {
 }
 
 @media (width <= 1536px) {
-  #tp-compilation-videos {
-    justify-content: center;
-    row-gap: 3rem;
-  }
-
-  .container {
-    width: 100%;
-  }
-}
-
-@media (width <= 1200px) {
-  #tp-all-yeah-songs-container {
-    width: 100%;
-  }
-}
-
-@media (width <= 900px) {
-  .tp-ranking-top3,
-  .tp-ranking-first-last-yeah-song {
-    grid-template-columns: unset;
-    row-gap: 3rem;
-  }
+	.container {
+	  width: 100%;
+	}
 }
 
 @media (width <= 600px) {

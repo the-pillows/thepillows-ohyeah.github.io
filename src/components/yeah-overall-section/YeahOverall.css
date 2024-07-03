@@ -1,0 +1,16 @@
+#tp-yeah-overall {
+    margin-bottom: 5rem;
+  
+    p {
+      margin-bottom: .5rem;
+    }
+}
+
+.tp-yeah-overall-container {
+    margin: auto;
+    width: 100%;
+}
+
+.tp-yeah-overall-row {
+    margin-bottom: 1rem;
+}

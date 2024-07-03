@@ -1,0 +1,85 @@
+#tp-ranking-songs {
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+}
+
+.tp-ranking-yeahs {
+  text-align: center;
+  display: grid;
+  grid-row-gap: 3rem;
+  column-gap: 1rem;
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.tp-ranking-total-yeahs {
+  background-color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+  border-radius: 5px;
+  width: fit-content;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.tp-ranking-podium-numbers {
+  display: inline-block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.tp-ranking-top3,
+.tp-ranking-first-last-yeah-song {
+  display: grid;
+  column-gap: 1rem;
+}
+
+.tp-ranking-card {
+  padding: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.3),0 1px 2px -1px rgba(0,0,0,.3);
+}
+
+.tp-ranking-top3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tp-ranking-first-position {
+  color: var(--firstPositionColor);
+}
+
+.tp-ranking-second-position {
+  color: var(--secondPositionColor);
+}
+
+.tp-ranking-third-position {
+  color: var(--thirdPositionColor);
+}
+
+.tp-ranking-song-winner {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.tp-ranking-first-yeah {
+  color: #28a745;
+}
+
+.tp-ranking-last-yeah {
+  color: #dc3545;
+}
+
+.tp-ranking-first-last-yeah-song {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (width <= 900px) {
+  .tp-ranking-top3,
+  .tp-ranking-first-last-yeah-song {
+    grid-template-columns: unset;
+    row-gap: 3rem;
+  }
+}

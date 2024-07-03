@@ -1,0 +1,14 @@
+#tp-tp-yeahs-per-year-container,
+#tp-yeahs-per-decade-container,
+#tp-yeahs-per-label-company-container {
+  background-color: #f8f8f8;
+  padding: 3rem 0;
+}
+
+.tp-yeahs-per-year,
+.tp-yeahs-per-decade,
+.tp-yeahs-per-label-company {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}

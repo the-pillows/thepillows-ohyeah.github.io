@@ -1,0 +1,20 @@
+#tp-all-yeah-songs-container {
+    margin: 5rem auto;
+    padding: 0 2rem;
+    width: 1140px;
+}
+
+#tp-search-song {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    width: 100%;
+    padding: .5rem .7rem;
+    margin-bottom: 2rem;
+}
+
+@media (width <= 1200px) {
+    #tp-all-yeah-songs-container {
+      width: 100%;
+    }
+}
